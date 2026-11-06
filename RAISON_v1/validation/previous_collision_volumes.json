@@ -1,0 +1,18 @@
+{
+  "base_link": 7.6026542216873e-05,
+  "thumb_metacarpal": 0.0002713761326424598,
+  "thumb_proximal": 0.00022222086247429036,
+  "thumb_distal": 0.00016261580839129297,
+  "index_aa-mcp": 7.62803481001959e-05,
+  "index_proximal": 0.00017087251938006107,
+  "index_intermediate": 2.520723089675699e-05,
+  "index_distal": 7.048649070223468e-06,
+  "ring_aa-mcp": 8.818420458208926e-05,
+  "ring_proximal": 0.00017087251938006107,
+  "ring_intermediate": 2.520723089675699e-05,
+  "ring_distal": 7.048649070223468e-06,
+  "middle_proximal": 0.00017087251938006107,
+  "middle_intermediate": 2.520723089675699e-05,
+  "middle_distal": 7.048649070223468e-06,
+  "palm_collision": 0.00027002200620955145
+}

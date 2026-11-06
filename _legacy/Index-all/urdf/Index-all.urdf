@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Index-all">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0101229197241493 0.000317480446782459 0.0590351023176954"
+        rpy="0 0 0" />
+      <mass
+        value="0.178215492162628" />
+      <inertia
+        ixx="9.99344230170038E-05"
+        ixy="5.93980031360358E-07"
+        ixz="3.45975466620314E-06"
+        iyy="5.48489921903895E-05"
+        iyz="-1.15526310127808E-05"
+        izz="6.32019445615828E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_metacarpal">
+    <inertial>
+      <origin
+        xyz="0.00187854660842859 -0.0326735601866326 0.0440058464361382"
+        rpy="0 0 0" />
+      <mass
+        value="0.105013952848067" />
+      <inertia
+        ixx="3.37146137932313E-05"
+        ixy="-3.2802518436214E-06"
+        ixz="1.49301047660993E-06"
+        iyy="1.52288006105472E-05"
+        iyz="-1.41709868418777E-06"
+        izz="2.98772171819981E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_metacarpal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.956862745098039 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_metacarpal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_CMC"
+    type="continuous">
+    <origin
+      xyz="0.0185000000000002 -0.0486427647406446 -0.00499999999999927"
+      rpy="1.5707963267949 0.0435718157687133 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_metacarpal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="thumb_proximal">
+    <inertial>
+      <origin
+        xyz="0.015829980245455 -0.0443092724264584 -0.010366505080163"
+        rpy="0 0 0" />
+      <mass
+        value="0.0785098433162724" />
+      <inertia
+        ixx="2.41812952637235E-05"
+        ixy="-8.49306489886321E-07"
+        ixz="-6.13265545543725E-07"
+        iyy="1.17862502391908E-05"
+        iyz="-1.89419566573702E-06"
+        izz="1.93841909075479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_MCP"
+    type="continuous">
+    <origin
+      xyz="0.0150845995743126 -0.0414445967119392 0.0340631110080921"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpal" />
+    <child
+      link="thumb_proximal" />
+    <axis
+      xyz="0.939692620785908 0.34202014332567 0" />
+  </joint>
+  <link
+    name="thumb_distal">
+    <inertial>
+      <origin
+        xyz="0.012253042464317 -0.0312788042559367 -0.0154630323703423"
+        rpy="0 0 0" />
+      <mass
+        value="0.0283788590255283" />
+      <inertia
+        ixx="9.53404297823254E-06"
+        ixy="4.32586933442992E-07"
+        ixz="3.12961039903695E-07"
+        iyy="4.31272043854202E-06"
+        iyz="-2.66821131434748E-06"
+        izz="9.11406312522468E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_IP"
+    type="continuous">
+    <origin
+      xyz="0.0200875293536654 -0.0551900333118274 -0.0126313652272833"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_proximal" />
+    <child
+      link="thumb_distal" />
+    <axis
+      xyz="0.939692620785907 0.342020143325671 0" />
+  </joint>
+  <link
+    name="index_aa-mcp">
+    <inertial>
+      <origin
+        xyz="0.00731408242140217 0.00428570507334064 -0.0246456641150386"
+        rpy="0 0 0" />
+      <mass
+        value="0.0176374205040313" />
+      <inertia
+        ixx="3.96018341091962E-06"
+        ixy="2.00426715310342E-07"
+        ixz="-4.65766111097405E-07"
+        iyy="3.48072696808597E-06"
+        iyz="1.12636480341439E-06"
+        izz="1.59183984570093E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_aa-mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_aa-mcp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index-abad"
+    type="continuous">
+    <origin
+      xyz="0 -0.0382499999999999 -0.0454000000000002"
+      rpy="1.27930995252244 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="index_aa-mcp" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="index_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00572029221761344 0.00330551662757073 -0.00835422056301606"
+        rpy="0 0 0" />
+      <mass
+        value="0.112554663156021" />
+      <inertia
+        ixx="1.61735009446521E-05"
+        ixy="1.13021852358102E-06"
+        ixz="4.74465401796312E-06"
+        iyy="2.96212160469684E-05"
+        iyz="-1.19857900881087E-06"
+        izz="1.47822521028216E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_MCP"
+    type="continuous">
+    <origin
+      xyz="0.00422361987002085 0.00297943830189714 -0.0391884925595838"
+      rpy="0.058157128855243 -0.0275620913749807 0.155743122976629" />
+    <parent
+      link="index_aa-mcp" />
+    <child
+      link="index_proximal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="index_intermediate">
+    <inertial>
+      <origin
+        xyz="-0.000165435018197209 -0.00135926317386531 -0.0156108610875146"
+        rpy="0 0 0" />
+      <mass
+        value="0.052724542472863" />
+      <inertia
+        ixx="7.61342796338725E-06"
+        ixy="-1.24257174182362E-07"
+        ixz="1.29673106281465E-06"
+        iyy="9.33721492560978E-06"
+        iyz="2.67880282818321E-07"
+        izz="2.64726198426196E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_intermediate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_PIP"
+    type="continuous">
+    <origin
+      xyz="0.00650000000000015 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="index_proximal" />
+    <child
+      link="index_intermediate" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="index_distal">
+    <inertial>
+      <origin
+        xyz="0.000745335735390578 -0.00171474313956787 -0.00546276028671959"
+        rpy="0 0 0" />
+      <mass
+        value="0.00515161010781521" />
+      <inertia
+        ixx="2.98896307116967E-07"
+        ixy="5.63567398403482E-10"
+        ixz="3.87235653596201E-08"
+        iyy="3.43685962753261E-07"
+        iyz="1.04407547320351E-09"
+        izz="7.80816256662301E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Index-all/meshes/index_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_DIP"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="index_intermediate" />
+    <child
+      link="index_distal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>

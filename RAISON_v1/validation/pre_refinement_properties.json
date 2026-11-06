@@ -1,0 +1,83 @@
+{
+  "base_link": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/base_link.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.866666666666667 0.909803921568627 1 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.0101229197241493 0.000317480446782464 0.0590351023176954\" rpy=\"0 0 0\" />\n      <mass value=\"0.178215492162628\" />\n      <inertia ixx=\"9.99344230170038E-05\" ixy=\"5.93980031360358E-07\" ixz=\"3.45975466620314E-06\" iyy=\"5.48489921903895E-05\" iyz=\"-1.15526310127808E-05\" izz=\"6.32019445615828E-05\" />\n    </inertial>\n    "
+  },
+  "thumb_metacarpal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/thumb_metacarpal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"1 0.956862745098039 0.929411764705882 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.00187854660842859 -0.0326735601866326 0.0440058464361382\" rpy=\"0 0 0\" />\n      <mass value=\"0.105013952848067\" />\n      <inertia ixx=\"3.37146137932313E-05\" ixy=\"-3.2802518436214E-06\" ixz=\"1.49301047660993E-06\" iyy=\"1.52288006105472E-05\" iyz=\"-1.41709868418777E-06\" izz=\"2.98772171819981E-05\" />\n    </inertial>\n    "
+  },
+  "thumb_proximal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/thumb_proximal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.866666666666667 0.909803921568627 1 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.015829980245455 -0.0443092724264584 -0.0103665050801631\" rpy=\"0 0 0\" />\n      <mass value=\"0.0785098433162724\" />\n      <inertia ixx=\"2.41812952637235E-05\" ixy=\"-8.49306489886322E-07\" ixz=\"-6.13265545543725E-07\" iyy=\"1.17862502391908E-05\" iyz=\"-1.89419566573702E-06\" izz=\"1.93841909075479E-05\" />\n    </inertial>\n    "
+  },
+  "thumb_distal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/thumb_distal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"1 1 1 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.012253042464317 -0.0312788042559367 -0.0154630323703423\" rpy=\"0 0 0\" />\n      <mass value=\"0.0283788590255283\" />\n      <inertia ixx=\"9.53404297823254E-06\" ixy=\"4.32586933442992E-07\" ixz=\"3.12961039903695E-07\" iyy=\"4.31272043854202E-06\" iyz=\"-2.66821131434748E-06\" izz=\"9.11406312522468E-06\" />\n    </inertial>\n    "
+  },
+  "index_aa-mcp": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_aa-mcp.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.00731408242140217 0.00428570507334062 -0.0246456641150386\" rpy=\"0 0 0\" />\n      <mass value=\"0.0176374205040313\" />\n      <inertia ixx=\"3.96018341091962E-06\" ixy=\"2.00426715310342E-07\" ixz=\"-4.65766111097406E-07\" iyy=\"3.48072696808597E-06\" iyz=\"1.12636480341439E-06\" izz=\"1.59183984570093E-06\" />\n    </inertial>\n    "
+  },
+  "index_proximal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_proximal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.00572029221761345 0.00330551662757071 -0.00835422056301607\" rpy=\"0 0 0\" />\n      <mass value=\"0.112554663156021\" />\n      <inertia ixx=\"1.61735009446521E-05\" ixy=\"1.13021852358101E-06\" ixz=\"4.74465401796312E-06\" iyy=\"2.96212160469684E-05\" iyz=\"-1.19857900881087E-06\" izz=\"1.47822521028216E-05\" />\n    </inertial>\n    "
+  },
+  "index_intermediate": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_intermediate.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.000165435018197211 -0.00135926317386532 -0.0156108610875146\" rpy=\"0 0 0\" />\n      <mass value=\"0.052724542472863\" />\n      <inertia ixx=\"7.61342796338725E-06\" ixy=\"-1.24257174182362E-07\" ixz=\"1.29673106281465E-06\" iyy=\"9.33721492560978E-06\" iyz=\"2.67880282818321E-07\" izz=\"2.64726198426196E-06\" />\n    </inertial>\n    "
+  },
+  "index_distal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_distal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.000745335735390578 -0.00171474313956788 -0.00546276028671959\" rpy=\"0 0 0\" />\n      <mass value=\"0.00515161010781521\" />\n      <inertia ixx=\"2.98896307116967E-07\" ixy=\"5.63567398403483E-10\" ixz=\"3.87235653596201E-08\" iyy=\"3.43685962753261E-07\" iyz=\"1.04407547320352E-09\" izz=\"7.80816256662301E-08\" />\n    </inertial>\n    "
+  },
+  "ring_aa-mcp": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/ring_aa-mcp.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.00867688936674356 0.0239761898976063 0.00819107800540209\" rpy=\"0 0 0\" />\n      <mass value=\"0.0174628898654397\" />\n      <inertia ixx=\"2.93661082137949E-06\" ixy=\"1.46852247569553E-06\" ixz=\"-6.6933373131207E-08\" iyy=\"2.0726369872086E-06\" iyz=\"1.06671782778787E-07\" izz=\"4.05140824122191E-06\" />\n    </inertial>\n    "
+  },
+  "ring_proximal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/ring_proximal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.00572029589290082 0.00644985768308613 -0.00835421774857668\" rpy=\"0 0 0\" />\n      <mass value=\"0.112554631148054\" />\n      <inertia ixx=\"1.61734934912382E-05\" ixy=\"1.13021397593734E-06\" ixz=\"4.74465836039073E-06\" iyy=\"2.96212154575488E-05\" iyz=\"-1.1985831363432E-06\" izz=\"1.47822547871218E-05\" />\n    </inertial>\n    "
+  },
+  "ring_intermediate": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/ring_intermediate.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.000165439813804347 0.00178507505443659 -0.0156108473365354\" rpy=\"0 0 0\" />\n      <mass value=\"0.0527244782038466\" />\n      <inertia ixx=\"7.61342468613173E-06\" ixy=\"-1.24256970146438E-07\" ixz=\"1.2967274727057E-06\" iyy=\"9.33721137520079E-06\" iyz=\"2.67880996059987E-07\" izz=\"2.64725919702355E-06\" />\n    </inertial>\n    "
+  },
+  "ring_distal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/ring_distal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.000745329585413054 0.00142959863343264 -0.00546275796523839\" rpy=\"0 0 0\" />\n      <mass value=\"0.00515160867905338\" />\n      <inertia ixx=\"2.98896267327064E-07\" ixy=\"5.63470619959603E-10\" ixz=\"3.87233812134337E-08\" iyy=\"3.43685660666032E-07\" iyz=\"1.04431942456599E-09\" izz=\"7.80815612963868E-08\" />\n    </inertial>\n    "
+  },
+  "middle_proximal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_proximal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.00572029221761345 0.00330551662757071 -0.00835422056301607\" rpy=\"0 0 0\" />\n      <mass value=\"0.112554663156021\" />\n      <inertia ixx=\"1.61735009446521E-05\" ixy=\"1.13021852358101E-06\" ixz=\"4.74465401796312E-06\" iyy=\"2.96212160469684E-05\" iyz=\"-1.19857900881087E-06\" izz=\"1.47822521028216E-05\" />\n    </inertial>\n    "
+  },
+  "middle_intermediate": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_intermediate.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"-0.000165435018197211 -0.00135926317386532 -0.0156108610875146\" rpy=\"0 0 0\" />\n      <mass value=\"0.052724542472863\" />\n      <inertia ixx=\"7.61342796338725E-06\" ixy=\"-1.24257174182362E-07\" ixz=\"1.29673106281465E-06\" iyy=\"9.33721492560978E-06\" iyz=\"2.67880282818321E-07\" izz=\"2.64726198426196E-06\" />\n    </inertial>\n    "
+  },
+  "middle_distal": {
+    "visual": "<visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"package://RAISON_v1/meshes/index_distal.STL\" />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"0.752941176470588 0.752941176470588 0.752941176470588 1\" />\n      </material>\n    </visual>\n    ",
+    "inertial": "<inertial>\n      <origin xyz=\"0.000745335735390578 -0.00171474313956788 -0.00546276028671959\" rpy=\"0 0 0\" />\n      <mass value=\"0.00515161010781521\" />\n      <inertia ixx=\"2.98896307116967E-07\" ixy=\"5.63567398403483E-10\" ixz=\"3.87235653596201E-08\" iyy=\"3.43685962753261E-07\" iyz=\"1.04407547320352E-09\" izz=\"7.80816256662301E-08\" />\n    </inertial>\n    "
+  },
+  "palm_collision": {
+    "visual": null,
+    "inertial": null
+  },
+  "joints": [
+    "<joint name=\"joint_thumb_CMC\" type=\"continuous\">\n    <origin xyz=\"0.0185000000000002 -0.0486427647406446 -0.00499999999999927\" rpy=\"1.5707963267949 0.0435718157687133 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"thumb_metacarpal\" />\n    <axis xyz=\"0 0 1\" />\n  </joint>\n  ",
+    "<joint name=\"joint_thumb_MCP\" type=\"continuous\">\n    <origin xyz=\"0.0150845995743126 -0.0414445967119392 0.0340631110080921\" rpy=\"0 0 0\" />\n    <parent link=\"thumb_metacarpal\" />\n    <child link=\"thumb_proximal\" />\n    <axis xyz=\"0.939692620785908 0.34202014332567 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_thumb_IP\" type=\"continuous\">\n    <origin xyz=\"0.0200875293536654 -0.0551900333118274 -0.0126313652272833\" rpy=\"0 0 0\" />\n    <parent link=\"thumb_proximal\" />\n    <child link=\"thumb_distal\" />\n    <axis xyz=\"0.939692620785907 0.342020143325671 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_index-abad\" type=\"continuous\">\n    <origin xyz=\"0 -0.0382499999999999 -0.0454000000000002\" rpy=\"1.27930995252244 0 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"index_aa-mcp\" />\n    <axis xyz=\"1 0 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_index_MCP\" type=\"continuous\">\n    <origin xyz=\"0.00422361987002085 0.00297943830189714 -0.0391884925595838\" rpy=\"0.058157128855243 -0.0275620913749807 0.155743122976629\" />\n    <parent link=\"index_aa-mcp\" />\n    <child link=\"index_proximal\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_index_PIP\" type=\"continuous\">\n    <origin xyz=\"0.00650000000000015 0 -0.045\" rpy=\"0 0 0\" />\n    <parent link=\"index_proximal\" />\n    <child link=\"index_intermediate\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_index_DIP\" type=\"continuous\">\n    <origin xyz=\"0.0035 0 -0.035\" rpy=\"0 0 0\" />\n    <parent link=\"index_intermediate\" />\n    <child link=\"index_distal\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_ring_abad\" type=\"continuous\">\n    <origin xyz=\"0 -0.03825 0.0306000000000003\" rpy=\"-1.57079632679292 1.57076528565885 -1.57079632679292\" />\n    <parent link=\"base_link\" />\n    <child link=\"ring_aa-mcp\" />\n    <axis xyz=\"0 0 1\" />\n  </joint>\n  ",
+    "<joint name=\"joint_ring_MCP\" type=\"continuous\">\n    <origin xyz=\"-0.00751573894894315 0.0385762708117149 0.00422361987002063\" rpy=\"1.67484964734501 -1.41285532849583 0.104084361688385\" />\n    <parent link=\"ring_aa-mcp\" />\n    <child link=\"ring_proximal\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_ring_PIP\" type=\"continuous\">\n    <origin xyz=\"0.0065 0 -0.045\" rpy=\"0 0 0\" />\n    <parent link=\"ring_proximal\" />\n    <child link=\"ring_intermediate\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_ring_DIP\" type=\"continuous\">\n    <origin xyz=\"0.0035 0 -0.035\" rpy=\"0 0 0\" />\n    <parent link=\"ring_intermediate\" />\n    <child link=\"ring_distal\" />\n    <axis xyz=\"0 1 0\" />\n  </joint>\n  \n  ",
+    "<joint name=\"joint_middle_MCP\" type=\"continuous\">\n    \n    <origin xyz=\"0 0 -0.006\" rpy=\"1.5707963267949 0 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"middle_proximal\" />\n    <axis xyz=\"0 -1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_middle_PIP\" type=\"continuous\">\n    <origin xyz=\"0.00650000000000015 0 -0.045\" rpy=\"0 0 0\" />\n    <parent link=\"middle_proximal\" />\n    <child link=\"middle_intermediate\" />\n    <axis xyz=\"0 -1 0\" />\n  </joint>\n  ",
+    "<joint name=\"joint_middle_DIP\" type=\"continuous\">\n    <origin xyz=\"0.0035 0 -0.035\" rpy=\"0 0 0\" />\n    <parent link=\"middle_intermediate\" />\n    <child link=\"middle_distal\" />\n    <axis xyz=\"0 -1 0\" />\n  </joint>\n  \n  ",
+    "<joint name=\"joint_palm_collision\" type=\"fixed\">\n    <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"palm_collision\" />\n  </joint>\n"
+  ]
+}

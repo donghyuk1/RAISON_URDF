@@ -1,0 +1,5 @@
+{
+  "urdf-visualizer.packages": {
+    "FINGER_v5_sizing-assem_pitch12": "${workspaceFolder}"
+  }
+}

@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FINGER_v5_sizing-assem_pitch12">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00860105152306334 -0.0141519570694045 0.0296070737342074"
+        rpy="0 0 0" />
+      <mass
+        value="1.7031857426844" />
+      <inertia
+        ixx="0.00637438121223653"
+        ixy="0.000485242199718883"
+        ixz="-0.000516263504126121"
+        iyy="0.00350832245509312"
+        iyz="0.000650475729843977"
+        izz="0.00395278825365719" />
+    </inertial>
+  </link>
+  <link
+    name="Middle_proximal">
+    <inertial>
+      <origin
+        xyz="-0.000981927267422038 -0.00118288474027885 -0.00409749525132446"
+        rpy="0 0 0" />
+      <mass
+        value="0.288831010648449" />
+      <inertia
+        ixx="4.90009243554783E-05"
+        ixy="1.20028398423529E-06"
+        ixz="4.6645979238047E-06"
+        iyy="5.89438072306371E-05"
+        iyz="-1.28558082787641E-06"
+        izz="4.76374927083885E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_middle_mcp"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Middle_proximal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Middle_intermediate">
+    <inertial>
+      <origin
+        xyz="0.00109471851424856 -0.007615218584167 -0.015725407210472"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500860202087927" />
+      <inertia
+        ixx="7.12632885057636E-06"
+        ixy="-1.13601974871047E-07"
+        ixz="1.2183931010913E-06"
+        iyy="8.73357675171187E-06"
+        iyz="2.72022212475924E-07"
+        izz="2.50619587983903E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_intermediate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_middle_pip"
+    type="continuous">
+    <origin
+      xyz="0.00525 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="Middle_proximal" />
+    <child
+      link="Middle_intermediate" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Middle_distal">
+    <inertial>
+      <origin
+        xyz="0.00224835392808172 -0.00751920558965082 -0.00730424720410121"
+        rpy="0 0 0" />
+      <mass
+        value="0.00400007586211099" />
+      <inertia
+        ixx="3.14335687984186E-07"
+        ixy="-2.01111489431765E-10"
+        ixz="4.17008720457605E-08"
+        iyy="3.58210340684352E-07"
+        iyz="-8.65736450908562E-10"
+        izz="7.84068085780495E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Middle_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_middle_dip"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="Middle_intermediate" />
+    <child
+      link="Middle_distal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link name="Middle_empty_link"/>
+  <joint
+    name="joint_middle_tip"
+    type="fixed">
+    <origin
+      xyz="0.00894408611145471 -0.007455932639021592 -0.022166606735296"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="Middle_distal" />
+    <child
+      link="Middle_empty_link" />
+  </joint>  
+  <link
+    name="Index_aa-mcp">
+    <inertial>
+      <origin
+        xyz="-0.00549999999999999 6.93889390390723E-18 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.229656313463639" />
+      <inertia
+        ixx="3.51661229991198E-05"
+        ixy="-1.20381699579111E-37"
+        ixz="0"
+        iyy="3.5974704602773E-05"
+        iyz="-1.34303183898664E-37"
+        izz="3.5974704602773E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_aa-mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_aa-mcp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_abad"
+    type="continuous">
+    <origin
+      xyz="0 -0.03825 -0.0454"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Index_aa-mcp" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Index_proximal">
+    <inertial>
+      <origin
+        xyz="-0.000186801820474308 0.00576118003666944 -0.0040974981064293"
+        rpy="0 0 0" />
+      <mass
+        value="0.288831054681236" />
+      <inertia
+        ixx="4.90009306145828E-05"
+        ixy="1.20028740222791E-06"
+        ixz="4.6645967323778E-06"
+        iyy="5.89438140958065E-05"
+        iyz="-1.28557791631543E-06"
+        izz="4.76374960597971E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_mcp"
+    type="continuous">
+    <origin
+      xyz="0.0010063 -0.0080134 -0.038467"
+      rpy="-0.20684 0.013708 0.15765" />
+    <parent
+      link="Index_aa-mcp" />
+    <child
+      link="Index_proximal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Index_intermediate">
+    <inertial>
+      <origin
+        xyz="-0.000155281449584964 -0.000671138519678371 -0.0157253762240998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500857495081431" />
+      <inertia
+        ixx="7.12627940568398E-06"
+        ixy="-1.13605887215094E-07"
+        ixz="1.21838733953495E-06"
+        iyy="8.73354651778297E-06"
+        iyz="2.72021285749039E-07"
+        izz="2.50620136401079E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_intermediate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_pip"
+    type="continuous">
+    <origin
+      xyz="0.0065 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="Index_proximal" />
+    <child
+      link="Index_intermediate" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Index_distal">
+    <inertial>
+      <origin
+        xyz="0.000998357047771771 -0.000575143964769431 -0.0073042485641565"
+        rpy="0 0 0" />
+      <mass
+        value="0.00400007550058822" />
+      <inertia
+        ixx="3.14335559068873E-07"
+        ixy="-2.01049226487287E-10"
+        ixz="4.17009165876003E-08"
+        iyy="3.58210408523272E-07"
+        iyz="-8.65755967650734E-10"
+        izz="7.84068752499178E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Index_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_dip"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="Index_intermediate" />
+    <child
+      link="Index_distal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link name="Index_empty_link"/>
+  <joint
+    name="joint_index_tip"
+    type="fixed">
+    <origin
+      xyz="0.00694408611145471 -0.000455932639021592 -0.022166606735296"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="Index_distal" />
+    <child
+      link="Index_empty_link" />
+  </joint>
+  <link
+    name="Ring_aa-mcp">
+    <inertial>
+      <origin
+        xyz="-0.00549999999999999 0 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.229656313463639" />
+      <inertia
+        ixx="3.51661229991198E-05"
+        ixy="-1.20381699579111E-37"
+        ixz="0"
+        iyy="3.5974704602773E-05"
+        iyz="-1.34303183898664E-37"
+        izz="3.5974704602773E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_aa-mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_aa-mcp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_abad"
+    type="continuous">
+    <origin
+      xyz="0 -0.03825 0.0306"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Ring_aa-mcp" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Ring_proximal">
+    <inertial>
+      <origin
+        xyz="-0.000186802984341679 0.00787304798055018 -0.00409749583481214"
+        rpy="0 0 0" />
+      <mass
+        value="0.288830999940464" />
+      <inertia
+        ixx="4.90009198625242E-05"
+        ixy="1.20028265137785E-06"
+        ixz="4.66459557895379E-06"
+        iyy="5.89438026556999E-05"
+        iyz="-1.28558062048071E-06"
+        izz="4.76374913045715E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_mcp"
+    type="continuous">
+    <origin
+      xyz="0.0010063 0.0080134 -0.038467"
+      rpy="0.20684 0.013708 -0.15765" />
+    <parent
+      link="Ring_aa-mcp" />
+    <child
+      link="Ring_proximal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Ring_intermediate">
+    <inertial>
+      <origin
+        xyz="-0.000155281943769873 0.0014407348367643 -0.0157253618712702"
+        rpy="0 0 0" />
+      <mass
+        value="0.0500856769025358" />
+      <inertia
+        ixx="7.1262676018086E-06"
+        ixy="-1.1360763130753E-07"
+        ixz="1.21838316786941E-06"
+        iyy="8.73353773290069E-06"
+        iyz="2.72022495576507E-07"
+        izz="2.50620048939057E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_intermediate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_pip"
+    type="continuous">
+    <origin
+      xyz="0.0065 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="Ring_proximal" />
+    <child
+      link="Ring_intermediate" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Ring_distal">
+    <inertial>
+      <origin
+        xyz="0.000998352572938415 0.00153673129024125 -0.00730424773483374"
+        rpy="0 0 0" />
+      <mass
+        value="0.00400007580283605" />
+      <inertia
+        ixx="3.14335653380412E-07"
+        ixy="-2.01161713675385E-10"
+        ixz="4.17008706371233E-08"
+        iyy="3.58210226279045E-07"
+        iyz="-8.65731928950345E-10"
+        izz="7.84067883048751E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Ring_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_dip"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="Ring_intermediate" />
+    <child
+      link="Ring_distal" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="Thumb_metacarpal">
+    <inertial>
+      <origin
+        xyz="0 0 0.0155"
+        rpy="0 0 0" />
+      <mass
+        value="0.229656313463639" />
+      <inertia
+        ixx="3.5974704602773E-05"
+        ixy="6.82502035984864E-38"
+        ixz="0"
+        iyy="3.5974704602773E-05"
+        iyz="-1.325874975781E-37"
+        izz="3.51661229991198E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_metacarpal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_metacarpal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Ring_empty_link"/>
+  <joint
+    name="joint_ring_tip"
+    type="fixed">
+    <origin
+      xyz="0.00694408611145471 -0.000455932639021592 -0.022166606735296"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="Ring_distal" />
+    <child
+      link="Ring_empty_link" />
+  </joint>
+  <joint
+    name="joint_thumb_yaw"
+    type="continuous">
+    <origin
+      xyz="0.0185 -0.064 -0.005"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Thumb_metacarpal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thumb_roll-pitch1">
+    <inertial>
+      <origin
+        xyz="-0.00187938524157176 -0.000684040286651318 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.230339688405611" />
+      <inertia
+        ixx="3.45650739385213E-05"
+        ixy="-8.10085949798749E-07"
+        ixz="-3.31977292561599E-21"
+        iyy="3.64959196204868E-05"
+        iyz="-1.20829852944705E-21"
+        izz="3.67907667934108E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_roll-pitch1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_roll-pitch1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_pitch1"
+    type="continuous">
+    <origin
+      xyz="0.012748 -0.035026 0.012395"
+      rpy="0 0 0" />
+    <parent
+      link="Thumb_metacarpal" />
+    <child
+      link="Thumb_roll-pitch1" />
+    <axis
+      xyz="0.93969 0.34202 0" />
+  </joint>
+  <link
+    name="Thumb_proximal">
+    <inertial>
+      <origin
+        xyz="0.0096980306049259 0.000436273754811339 -0.00339432925892027"
+        rpy="0 0 0" />
+      <mass
+        value="0.0889794932922681" />
+      <inertia
+        ixx="7.84280142150119E-06"
+        ixy="-4.10603056694893E-07"
+        ixz="-2.27286890167128E-07"
+        iyy="9.87701168768263E-06"
+        iyz="-1.06565571035376E-07"
+        izz="1.65732235650426E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_pitch2"
+    type="continuous">
+    <origin
+      xyz="0.013875 -0.038122 -0.01087"
+      rpy="-1.5708 0.2618 -1.2217" />
+    <parent
+      link="Thumb_roll-pitch1" />
+    <child
+      link="Thumb_proximal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thumb_distal">
+    <inertial>
+      <origin
+        xyz="0.00698298961607866 0.0012926713206233 0.000617041354604532"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100644223118035" />
+      <inertia
+        ixx="4.35167379331713E-07"
+        ixy="-8.45054364536635E-08"
+        ixz="2.72838640605233E-08"
+        iyy="8.02925678042746E-07"
+        iyz="1.51396012047487E-09"
+        izz="7.01727520400499E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FINGER_v5_sizing-assem_pitch12/meshes/Thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_thumb_ip"
+    type="continuous">
+    <origin
+      xyz="0.045 0.00725 0"
+      rpy="0 0 0" />
+    <parent
+      link="Thumb_proximal" />
+    <child
+      link="Thumb_distal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link name="Thumb_empty_link"/>
+  <joint
+    name="joint_thumb_tip"
+    type="fixed">
+    <origin
+      xyz="0.025 0.01 -0.0"
+      rpy="0 0 0" />
+    <parent
+      link="Thumb_distal" />
+    <child
+      link="Thumb_empty_link" />
+  </joint>
+
+</robot>

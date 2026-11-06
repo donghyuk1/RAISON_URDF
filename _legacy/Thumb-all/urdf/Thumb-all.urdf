@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Thumb-all">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0101229197241493 0.00031748044678246 0.0590351023176954"
+        rpy="0 0 0" />
+      <mass
+        value="0.178215492162628" />
+      <inertia
+        ixx="9.99344230170038E-05"
+        ixy="5.93980031360358E-07"
+        ixz="3.45975466620314E-06"
+        iyy="5.48489921903895E-05"
+        iyz="-1.15526310127808E-05"
+        izz="6.32019445615828E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_metacarpal">
+    <inertial>
+      <origin
+        xyz="0.00187854660842859 -0.0326735601866326 0.0440058464361382"
+        rpy="0 0 0" />
+      <mass
+        value="0.105013952848067" />
+      <inertia
+        ixx="3.37146137932313E-05"
+        ixy="-3.2802518436214E-06"
+        ixz="1.49301047660993E-06"
+        iyy="1.52288006105472E-05"
+        iyz="-1.41709868418777E-06"
+        izz="2.98772171819982E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_metacarpal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.956862745098039 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_metacarpal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_CMC"
+    type="continuous">
+    <origin
+      xyz="0.0185000000000002 -0.0486427647406446 -0.00499999999999927"
+      rpy="1.5707963267949 0.0435718157687133 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_metacarpal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="thumb_proximal">
+    <inertial>
+      <origin
+        xyz="0.015829980245455 -0.0443092724264584 -0.0103665050801631"
+        rpy="0 0 0" />
+      <mass
+        value="0.0785098433162724" />
+      <inertia
+        ixx="2.41812952637235E-05"
+        ixy="-8.49306489886322E-07"
+        ixz="-6.13265545543725E-07"
+        iyy="1.17862502391908E-05"
+        iyz="-1.89419566573702E-06"
+        izz="1.93841909075479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_MCP"
+    type="continuous">
+    <origin
+      xyz="0.0150845995743126 -0.0414445967119392 0.0340631110080921"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpal" />
+    <child
+      link="thumb_proximal" />
+    <axis
+      xyz="0.939692620785908 0.34202014332567 0" />
+  </joint>
+  <link
+    name="thumb_distal">
+    <inertial>
+      <origin
+        xyz="0.012253042464317 -0.0312788042559367 -0.0154630323703423"
+        rpy="0 0 0" />
+      <mass
+        value="0.0283788590255283" />
+      <inertia
+        ixx="9.53404297823254E-06"
+        ixy="4.32586933442992E-07"
+        ixz="3.12961039903696E-07"
+        iyy="4.31272043854202E-06"
+        iyz="-2.66821131434748E-06"
+        izz="9.11406312522468E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Thumb-all/meshes/thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_IP"
+    type="continuous">
+    <origin
+      xyz="0.0200875293536654 -0.0551900333118274 -0.0126313652272833"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_proximal" />
+    <child
+      link="thumb_distal" />
+    <axis
+      xyz="0.939692620785907 0.342020143325671 0" />
+  </joint>
+</robot>

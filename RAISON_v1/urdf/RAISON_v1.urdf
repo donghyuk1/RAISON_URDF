@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RAISON_v1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0101229197241493 0.000317480446782464 0.0590351023176954"
+        rpy="0 0 0" />
+      <mass
+        value="0.178215492162628" />
+      <inertia
+        ixx="9.99344230170038E-05"
+        ixy="5.93980031360358E-07"
+        ixz="3.45975466620314E-06"
+        iyy="5.48489921903895E-05"
+        iyz="-1.15526310127808E-05"
+        izz="6.32019445615828E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision name="base_actuator_cylinder">
+      <origin xyz="0.0185 -0.0803 -0.005" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.03" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_metacarpal">
+    <inertial>
+      <origin
+        xyz="0.00187854660842859 -0.0326735601866326 0.0440058464361382"
+        rpy="0 0 0" />
+      <mass
+        value="0.105013952848067" />
+      <inertia
+        ixx="3.37146137932313E-05"
+        ixy="-3.2802518436214E-06"
+        ixz="1.49301047660993E-06"
+        iyy="1.52288006105472E-05"
+        iyz="-1.41709868418777E-06"
+        izz="2.98772171819981E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/thumb_metacarpal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.956862745098039 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision name="actuator_body">
+      <origin xyz="0.007754996962 -0.04411235381 0.03406311106" rpy="1.570796327 -0 1.919862177" />
+      <geometry>
+        <cylinder radius="0.019" length="0.03" />
+      </geometry>
+    </collision>
+    <collision name="structure_1">
+      <origin xyz="-0.004162729191 -0.01910972574 0.05076782037" rpy="-1.647641332 -0.8247977462 -0.3363366758" />
+      <geometry>
+        <box size="0.01894755745 0.03376622952 0.05567901941" />
+      </geometry>
+    </collision>
+    <collision name="structure_2">
+      <origin xyz="0.01168554074 -0.04870890805 0.01309554914" rpy="-1.639850197 -1.285961536 1.995042374" />
+      <geometry>
+        <box size="0.003822097079 0.006886876776 0.02171279723" />
+      </geometry>
+    </collision>
+    <collision name="structure_3">
+      <origin xyz="0.002621085225 -0.05661723404 0.05192806056" rpy="1.188971961 -1.020517045 -1.276418725" />
+      <geometry>
+        <box size="0.004883429953 0.01225299343 0.04632058937" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_CMC"
+    type="continuous">
+    <origin
+      xyz="0.0185000000000002 -0.0486427647406446 -0.00499999999999927"
+      rpy="1.5707963267949 0.0435718157687133 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_metacarpal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="thumb_proximal">
+    <inertial>
+      <origin
+        xyz="0.015829980245455 -0.0443092724264584 -0.0103665050801631"
+        rpy="0 0 0" />
+      <mass
+        value="0.0785098433162724" />
+      <inertia
+        ixx="2.41812952637235E-05"
+        ixy="-8.49306489886322E-07"
+        ixz="-6.13265545543725E-07"
+        iyy="1.17862502391908E-05"
+        iyz="-1.89419566573702E-06"
+        izz="1.93841909075479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/thumb_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision name="actuator_body">
+      <origin xyz="0.0127579269 -0.05785779062 -0.01263136487" rpy="1.570796327 -0 1.919862177" />
+      <geometry>
+        <cylinder radius="0.019" length="0.03" />
+      </geometry>
+    </collision>
+    <collision name="structure_1">
+      <origin xyz="0.01887525544 -0.0662879025 -0.009930249581" rpy="0.006925152723 -0.2602572802 -1.219670213" />
+      <geometry>
+        <box size="0.006172003865 0.02043811243 0.04186018758" />
+      </geometry>
+    </collision>
+    <collision name="structure_2">
+      <origin xyz="0.008614099119 -0.03029385447 -0.008631338133" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.03675694484 0.03024250539 0.02962478483" />
+      </geometry>
+    </collision>
+    <collision name="structure_3">
+      <origin xyz="0.01506171512 -0.0007133787247 -0.002389896574" rpy="-0.906877303 -0.04052729321 0.4909405865" />
+      <geometry>
+        <box size="0.009437706805 0.02893067707 0.03688935997" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_MCP"
+    type="continuous">
+    <origin
+      xyz="0.0150845995743126 -0.0414445967119392 0.0340631110080921"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpal" />
+    <child
+      link="thumb_proximal" />
+    <axis
+      xyz="0.939692620785908 0.34202014332567 0" />
+  </joint>
+  <link
+    name="thumb_distal">
+    <inertial>
+      <origin
+        xyz="0.012253042464317 -0.0312788042559367 -0.0154630323703423"
+        rpy="0 0 0" />
+      <mass
+        value="0.0283788590255283" />
+      <inertia
+        ixx="9.53404297823254E-06"
+        ixy="4.32586933442992E-07"
+        ixz="3.12961039903695E-07"
+        iyy="4.31272043854202E-06"
+        iyz="-2.66821131434748E-06"
+        izz="9.11406312522468E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision name="thumb_front_contact">
+      <origin xyz="0.008547493057 -0.0258111516 -0.02410555129" rpy="-2.879793319 -3.035290866e-08 0.3490658423" />
+      <geometry>
+        <box size="0.02500816804 0.05401825486 0.002" />
+      </geometry>
+    </collision>
+    <collision name="thumb_back_contact">
+      <origin xyz="0.01259492964 -0.03693050804 -0.00700866275" rpy="0.6001992198 2.179829699e-07 0.3490659996" />
+      <geometry>
+        <box size="0.02500877271 0.04669730067 0.002" />
+      </geometry>
+    </collision>
+    <collision name="thumb_IP_hinge">
+      <origin xyz="0.01216901944 0.004429160856 0" rpy="1.570796327 -0 1.919862177" />
+      <geometry>
+        <cylinder radius="0.015" length="0.0025" />
+      </geometry>
+    </collision>
+    <collision name="thumb_rounded_tip">
+      <origin xyz="0.01874339407 -0.0538360955 -0.026" rpy="1.570796327 -0 1.919862177" />
+      <geometry>
+        <cylinder radius="0.006" length="0.028" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_IP"
+    type="continuous">
+    <origin
+      xyz="0.0200875293536654 -0.0551900333118274 -0.0126313652272833"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_proximal" />
+    <child
+      link="thumb_distal" />
+    <axis
+      xyz="0.939692620785907 0.342020143325671 0" />
+  </joint>
+  <link
+    name="index_aa-mcp">
+    <inertial>
+      <origin
+        xyz="0.00731408242140217 0.00428570507334062 -0.0246456641150386"
+        rpy="0 0 0" />
+      <mass
+        value="0.0176374205040313" />
+      <inertia
+        ixx="3.96018341091962E-06"
+        ixy="2.00426715310342E-07"
+        ixz="-4.65766111097406E-07"
+        iyy="3.48072696808597E-06"
+        iyz="1.12636480341439E-06"
+        izz="1.59183984570093E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/index_aa-mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="structure_1">
+      <origin xyz="0.004601129543 -0.003242174238 -0.03983941633" rpy="-1.601655202 0.1789025937 0.1594332218" />
+      <geometry>
+        <cylinder radius="0.01564957881" length="0.01477443721" />
+      </geometry>
+    </collision>
+    <collision name="structure_2">
+      <origin xyz="0.002869174362 0.01845095347 -0.03618353242" rpy="0.4941294792 -0.01583587995 1.738496017" />
+      <geometry>
+        <box size="0.006199401852 0.01881493357 0.02181160875" />
+      </geometry>
+    </collision>
+    <collision name="structure_3">
+      <origin xyz="0.01045684959 0.005625085067 -0.007644931087" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.009713698644 0.02896928247 0.028417069" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index-abad"
+    type="continuous">
+    <origin
+      xyz="0 -0.0382499999999999 -0.0454000000000002"
+      rpy="1.27930995252244 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="index_aa-mcp" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="index_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00572029221761345 0.00330551662757071 -0.00835422056301607"
+        rpy="0 0 0" />
+      <mass
+        value="0.112554663156021" />
+      <inertia
+        ixx="1.61735009446521E-05"
+        ixy="1.13021852358101E-06"
+        ixz="4.74465401796312E-06"
+        iyy="2.96212160469684E-05"
+        iyz="-1.19857900881087E-06"
+        izz="1.47822521028216E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/index_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="MCP_motor">
+      <origin xyz="0 0.001277833205 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.024" />
+      </geometry>
+    </collision>
+    <collision name="offset_motor">
+      <origin xyz="-0.03544 0.005480000205 0.00625" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.023" />
+      </geometry>
+    </collision>
+    <collision name="PIP_hinge">
+      <origin xyz="0.0065 -0.001372165795 -0.045" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.0168" />
+      </geometry>
+    </collision>
+    <collision name="phalange_web">
+      <origin xyz="0.00325 -0.001372165795 -0.0245" rpy="3.141592654 0.2204937614 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0168 0.0297195222" />
+      </geometry>
+    </collision>
+    <collision name="motor_mount">
+      <origin xyz="-0.01772 0.01250000021 0.003125" rpy="3.141592654 1.396236807 3.141592654" />
+      <geometry>
+        <box size="0.007 0.004 0.03598688789" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_MCP"
+    type="continuous">
+    <origin
+      xyz="0.00422361987002085 0.00297943830189714 -0.0391884925595838"
+      rpy="0.058157128855243 -0.0275620913749807 0.155743122976629" />
+    <parent
+      link="index_aa-mcp" />
+    <child
+      link="index_proximal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="index_intermediate">
+    <inertial>
+      <origin
+        xyz="-0.000165435018197211 -0.00135926317386532 -0.0156108610875146"
+        rpy="0 0 0" />
+      <mass
+        value="0.052724542472863" />
+      <inertia
+        ixx="7.61342796338725E-06"
+        ixy="-1.24257174182362E-07"
+        ixz="1.29673106281465E-06"
+        iyy="9.33721492560978E-06"
+        iyz="2.67880282818321E-07"
+        izz="2.64726198426196E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/index_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="PIP_hinge">
+      <origin xyz="0 -0.001372165978 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="DIP_hinge">
+      <origin xyz="0.0035 -0.001372165978 -0.035" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="upper_web">
+      <origin xyz="0.000875 -0.001372165978 -0.00875" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.018 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+    <collision name="lower_web">
+      <origin xyz="0.002625 -0.001372165978 -0.02625" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_PIP"
+    type="continuous">
+    <origin
+      xyz="0.00650000000000015 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="index_proximal" />
+    <child
+      link="index_intermediate" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="index_distal">
+    <inertial>
+      <origin
+        xyz="0.000745335735390578 -0.00171474313956788 -0.00546276028671959"
+        rpy="0 0 0" />
+      <mass
+        value="0.00515161010781521" />
+      <inertia
+        ixx="2.98896307116967E-07"
+        ixy="5.63567398403483E-10"
+        ixz="3.87235653596201E-08"
+        iyy="3.43685962753261E-07"
+        iyz="1.04407547320352E-09"
+        izz="7.80816256662301E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/index_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="DIP_hinge">
+      <origin xyz="0 -0.001622166485 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="rounded_tip">
+      <origin xyz="0.0025 -0.001622166485 -0.0195" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.005" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="tip_web">
+      <origin xyz="0.00125 -0.001622166485 -0.00975" rpy="3.141592654 0.1275095582 3.141592654" />
+      <geometry>
+        <box size="0.01 0.01230000053 0.01965960325" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_index_DIP"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="index_intermediate" />
+    <child
+      link="index_distal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ring_aa-mcp">
+    <inertial>
+      <origin
+        xyz="-0.00867688936674356 0.0239761898976063 0.00819107800540209"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174628898654397" />
+      <inertia
+        ixx="2.93661082137949E-06"
+        ixy="1.46852247569553E-06"
+        ixz="-6.6933373131207E-08"
+        iyy="2.0726369872086E-06"
+        iyz="1.06671782778787E-07"
+        izz="4.05140824122191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/ring_aa-mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="structure_1">
+      <origin xyz="-0.002237384178 0.009890896017 0.01025319051" rpy="-1.323878591 1.31162492 2.654891959" />
+      <geometry>
+        <box size="0.009045968539 0.03131409933 0.02672701573" />
+      </geometry>
+    </collision>
+    <collision name="structure_2">
+      <origin xyz="-0.004685033341 0.03973025861 0.003018274195" rpy="-2.269356227 1.348763007 -2.147010563" />
+      <geometry>
+        <cylinder radius="0.01557342255" length="0.01494374528" />
+      </geometry>
+    </collision>
+    <collision name="structure_3">
+      <origin xyz="-0.02510636802 0.03248494827 0.008234450087" rpy="-1.971635583 0.1494225172 0.1888578149" />
+      <geometry>
+        <box size="0.006137063498 0.01849608954 0.02228425478" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_abad"
+    type="continuous">
+    <origin
+      xyz="0 -0.03825 0.0306000000000003"
+      rpy="-1.57079632679292 1.57076528565885 -1.57079632679292" />
+    <parent
+      link="base_link" />
+    <child
+      link="ring_aa-mcp" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="ring_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00572029589290082 0.00644985768308613 -0.00835421774857668"
+        rpy="0 0 0" />
+      <mass
+        value="0.112554631148054" />
+      <inertia
+        ixx="1.61734934912382E-05"
+        ixy="1.13021397593734E-06"
+        ixz="4.74465836039073E-06"
+        iyy="2.96212154575488E-05"
+        iyz="-1.1985831363432E-06"
+        izz="1.47822547871218E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/ring_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="MCP_motor">
+      <origin xyz="0 0.004422165879 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.024" />
+      </geometry>
+    </collision>
+    <collision name="offset_motor">
+      <origin xyz="-0.03544 0.008624332879 0.00625" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.023" />
+      </geometry>
+    </collision>
+    <collision name="PIP_hinge">
+      <origin xyz="0.0065 0.001772166879 -0.045" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.0168" />
+      </geometry>
+    </collision>
+    <collision name="phalange_web">
+      <origin xyz="0.00325 0.001772166879 -0.0245" rpy="3.141592654 0.2204937614 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0168 0.0297195222" />
+      </geometry>
+    </collision>
+    <collision name="motor_mount">
+      <origin xyz="-0.01772 0.01564433288 0.003125" rpy="3.141592654 1.396236807 3.141592654" />
+      <geometry>
+        <box size="0.007 0.004 0.03598688789" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_MCP"
+    type="continuous">
+    <origin
+      xyz="-0.00751573894894315 0.0385762708117149 0.00422361987002063"
+      rpy="1.67484964734501 -1.41285532849583 0.104084361688385" />
+    <parent
+      link="ring_aa-mcp" />
+    <child
+      link="ring_proximal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ring_intermediate">
+    <inertial>
+      <origin
+        xyz="-0.000165439813804347 0.00178507505443659 -0.0156108473365354"
+        rpy="0 0 0" />
+      <mass
+        value="0.0527244782038466" />
+      <inertia
+        ixx="7.61342468613173E-06"
+        ixy="-1.24256970146438E-07"
+        ixz="1.2967274727057E-06"
+        iyy="9.33721137520079E-06"
+        iyz="2.67880996059987E-07"
+        izz="2.64725919702355E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/ring_intermediate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="PIP_hinge">
+      <origin xyz="0 0.00177216623 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="DIP_hinge">
+      <origin xyz="0.0035 0.00177216623 -0.035" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="upper_web">
+      <origin xyz="0.000875 0.00177216623 -0.00875" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.018 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+    <collision name="lower_web">
+      <origin xyz="0.002625 0.00177216623 -0.02625" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_PIP"
+    type="continuous">
+    <origin
+      xyz="0.0065 0 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="ring_proximal" />
+    <child
+      link="ring_intermediate" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ring_distal">
+    <inertial>
+      <origin
+        xyz="0.000745329585413054 0.00142959863343264 -0.00546275796523839"
+        rpy="0 0 0" />
+      <mass
+        value="0.00515160867905338" />
+      <inertia
+        ixx="2.98896267327064E-07"
+        ixy="5.63470619959603E-10"
+        ixz="3.87233812134337E-08"
+        iyy="3.43685660666032E-07"
+        iyz="1.04431942456599E-09"
+        izz="7.80815612963868E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAISON_v1/meshes/ring_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="DIP_hinge">
+      <origin xyz="0 0.001522166189 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="rounded_tip">
+      <origin xyz="0.0025 0.001522166189 -0.0195" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.005" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="tip_web">
+      <origin xyz="0.00125 0.001522166189 -0.00975" rpy="3.141592654 0.1275095582 3.141592654" />
+      <geometry>
+        <box size="0.01 0.01230000053 0.01965960325" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ring_DIP"
+    type="continuous">
+    <origin
+      xyz="0.0035 0 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="ring_intermediate" />
+    <child
+      link="ring_distal" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <!-- Middle finger: legacy v5 MCP frame; current index geometry/inertias.
+       No ab/ad joint. Local -Y axes follow the legacy middle convention. -->
+  <link name="middle_proximal">
+    <inertial>
+      <origin xyz="-0.00572029221761345 0.00330551662757071 -0.00835422056301607" rpy="0 0 0" />
+      <mass value="0.112554663156021" />
+      <inertia ixx="1.61735009446521E-05" ixy="1.13021852358101E-06" ixz="4.74465401796312E-06" iyy="2.96212160469684E-05" iyz="-1.19857900881087E-06" izz="1.47822521028216E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://RAISON_v1/meshes/index_proximal.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="MCP_motor">
+      <origin xyz="0 0.001277833205 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.024" />
+      </geometry>
+    </collision>
+    <collision name="offset_motor">
+      <origin xyz="-0.03544 0.005480000205 0.00625" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.023" />
+      </geometry>
+    </collision>
+    <collision name="PIP_hinge">
+      <origin xyz="0.0065 -0.001372165795 -0.045" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.0168" />
+      </geometry>
+    </collision>
+    <collision name="phalange_web">
+      <origin xyz="0.00325 -0.001372165795 -0.0245" rpy="3.141592654 0.2204937614 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0168 0.0297195222" />
+      </geometry>
+    </collision>
+    <collision name="motor_mount">
+      <origin xyz="-0.01772 0.01250000021 0.003125" rpy="3.141592654 1.396236807 3.141592654" />
+      <geometry>
+        <box size="0.007 0.004 0.03598688789" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_middle_MCP" type="continuous">
+    <!-- Tune xyz Z in meters: +Z toward ring, -Z toward index; along MCP axis. -->
+    <origin xyz="0 0 -0.006" rpy="1.5707963267949 0 0" />
+    <parent link="base_link" />
+    <child link="middle_proximal" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="middle_intermediate">
+    <inertial>
+      <origin xyz="-0.000165435018197211 -0.00135926317386532 -0.0156108610875146" rpy="0 0 0" />
+      <mass value="0.052724542472863" />
+      <inertia ixx="7.61342796338725E-06" ixy="-1.24257174182362E-07" ixz="1.29673106281465E-06" iyy="9.33721492560978E-06" iyz="2.67880282818321E-07" izz="2.64726198426196E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://RAISON_v1/meshes/index_intermediate.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="PIP_hinge">
+      <origin xyz="0 -0.001372165978 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="DIP_hinge">
+      <origin xyz="0.0035 -0.001372165978 -0.035" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.0167999994" />
+      </geometry>
+    </collision>
+    <collision name="upper_web">
+      <origin xyz="0.000875 -0.001372165978 -0.00875" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.018 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+    <collision name="lower_web">
+      <origin xyz="0.002625 -0.001372165978 -0.02625" rpy="3.141592654 0.09966865249 3.141592654" />
+      <geometry>
+        <box size="0.014 0.0167999994 0.01758728234" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_middle_PIP" type="continuous">
+    <origin xyz="0.00650000000000015 0 -0.045" rpy="0 0 0" />
+    <parent link="middle_proximal" />
+    <child link="middle_intermediate" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="middle_distal">
+    <inertial>
+      <origin xyz="0.000745335735390578 -0.00171474313956788 -0.00546276028671959" rpy="0 0 0" />
+      <mass value="0.00515161010781521" />
+      <inertia ixx="2.98896307116967E-07" ixy="5.63567398403483E-10" ixz="3.87235653596201E-08" iyy="3.43685962753261E-07" iyz="1.04407547320352E-09" izz="7.80816256662301E-08" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://RAISON_v1/meshes/index_distal.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision name="DIP_hinge">
+      <origin xyz="0 -0.001622166485 0" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="rounded_tip">
+      <origin xyz="0.0025 -0.001622166485 -0.0195" rpy="0 -1.570796327 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.005" length="0.01230000053" />
+      </geometry>
+    </collision>
+    <collision name="tip_web">
+      <origin xyz="0.00125 -0.001622166485 -0.00975" rpy="3.141592654 0.1275095582 3.141592654" />
+      <geometry>
+        <box size="0.01 0.01230000053 0.01965960325" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_middle_DIP" type="continuous">
+    <origin xyz="0.0035 0 -0.035" rpy="0 0 0" />
+    <parent link="middle_intermediate" />
+    <child link="middle_distal" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <!-- Collision-only fixed frame. Palm mass remains in base_link inertia. -->
+  <link name="palm_collision">
+    <collision name="palm_mesh">
+      <origin xyz="0 0 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <mesh filename="package://RAISON_v1/meshes/FINGER_v6_structure_palm.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_palm_collision" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="palm_collision" />
+  </joint>
+</robot>

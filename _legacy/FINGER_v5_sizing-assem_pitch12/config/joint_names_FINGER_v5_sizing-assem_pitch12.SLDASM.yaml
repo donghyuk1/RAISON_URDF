@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'joint_index_abad', 'joint_index_mcp', 'joint_index_pip', 'joint_index_dip', 'joint_ring_abad', 'joint_ring_mcp', 'joint_ring_pip', 'joint_ring_dip', 'joint_thumb_yaw', 'joint_thumb_pitch1', 'joint_thumb_pitch2', 'Joint_thumb_ip', ]

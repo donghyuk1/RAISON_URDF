@@ -1,0 +1,122 @@
+{
+  "thumb_metacarpal": {
+    "primitives": 4,
+    "subdivided_faces": 44928,
+    "enclosed_subtriangle_fraction": 0.8612891737891738,
+    "summed_volume_m3": 7.298939239243011e-05,
+    "summed_volume_reduction_percent": 49.599538219164074
+  },
+  "thumb_proximal": {
+    "primitives": 4,
+    "subdivided_faces": 40424,
+    "enclosed_subtriangle_fraction": 0.899688303977835,
+    "summed_volume_m3": 8.230767319680719e-05,
+    "summed_volume_reduction_percent": 37.001943731843
+  },
+  "thumb_distal": {
+    "primitives": 4,
+    "subdivided_faces": 5456,
+    "enclosed_subtriangle_fraction": 0.35410557184750735,
+    "summed_volume_m3": 9.971350809248744e-06,
+    "summed_volume_reduction_percent": 82.33653642533423
+  },
+  "index_aa-mcp": {
+    "primitives": 3,
+    "subdivided_faces": 5882,
+    "enclosed_subtriangle_fraction": 0.810438626317579,
+    "summed_volume_m3": 2.1908196981227747e-05,
+    "summed_volume_reduction_percent": 29.06543262709944
+  },
+  "index_proximal": {
+    "primitives": 5,
+    "subdivided_faces": 82198,
+    "enclosed_subtriangle_fraction": 0.8723204944159225,
+    "summed_volume_m3": 6.019695429771389e-05,
+    "summed_volume_reduction_percent": 39.58828729364473
+  },
+  "index_intermediate": {
+    "primitives": 4,
+    "subdivided_faces": 10220,
+    "enclosed_subtriangle_fraction": 0.4774951076320939,
+    "summed_volume_m3": 1.8809956918059486e-05,
+    "summed_volume_reduction_percent": 21.89695685891624
+  },
+  "index_distal": {
+    "primitives": 3,
+    "subdivided_faces": 9272,
+    "enclosed_subtriangle_fraction": 0.8416738567730803,
+    "summed_volume_m3": 5.55776059741203e-06,
+    "summed_volume_reduction_percent": 15.607061842769754
+  },
+  "ring_aa-mcp": {
+    "primitives": 3,
+    "subdivided_faces": 5622,
+    "enclosed_subtriangle_fraction": 0.7972251867662753,
+    "summed_volume_m3": 2.148655225360676e-05,
+    "summed_volume_reduction_percent": 41.99959194256609
+  },
+  "ring_proximal": {
+    "primitives": 5,
+    "subdivided_faces": 82198,
+    "enclosed_subtriangle_fraction": 0.8723204944159225,
+    "summed_volume_m3": 6.019695429771389e-05,
+    "summed_volume_reduction_percent": 39.58828889988588
+  },
+  "ring_intermediate": {
+    "primitives": 4,
+    "subdivided_faces": 10220,
+    "enclosed_subtriangle_fraction": 0.4774951076320939,
+    "summed_volume_m3": 1.8809956918059486e-05,
+    "summed_volume_reduction_percent": 21.89695685891624
+  },
+  "ring_distal": {
+    "primitives": 3,
+    "subdivided_faces": 9272,
+    "enclosed_subtriangle_fraction": 0.8416738567730803,
+    "summed_volume_m3": 5.55776059741203e-06,
+    "summed_volume_reduction_percent": 15.607061842769754
+  },
+  "middle_proximal": {
+    "primitives": 5,
+    "subdivided_faces": 82198,
+    "enclosed_subtriangle_fraction": 0.8723204944159225,
+    "summed_volume_m3": 6.019695429771389e-05,
+    "summed_volume_reduction_percent": 39.58828729364473
+  },
+  "middle_intermediate": {
+    "primitives": 4,
+    "subdivided_faces": 10220,
+    "enclosed_subtriangle_fraction": 0.4774951076320939,
+    "summed_volume_m3": 1.8809956918059486e-05,
+    "summed_volume_reduction_percent": 21.89695685891624
+  },
+  "middle_distal": {
+    "primitives": 3,
+    "subdivided_faces": 9272,
+    "enclosed_subtriangle_fraction": 0.8416738567730803,
+    "summed_volume_m3": 5.55776059741203e-06,
+    "summed_volume_reduction_percent": 15.607061842769754
+  },
+  "thumb_front_contact": {
+    "plane_error_m": 2.1911049363776414e-12,
+    "other_primitives_behind_plane": true
+  },
+  "thumb_back_contact": {
+    "plane_error_m": 2.963605055805729e-12,
+    "other_primitives_behind_plane": true
+  },
+  "base_actuator": {
+    "center_m": [
+      0.0185,
+      -0.0803,
+      -0.005
+    ],
+    "shift_from_CMC_m": -0.03165723526
+  },
+  "palm_alignment": {
+    "max_vertex_error_m": 3.931252652008404e-09,
+    "scale": "0.001 0.001 0.001",
+    "xyz": "0 0 0",
+    "rpy": "1.570796327 0 0"
+  }
+}
