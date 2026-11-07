@@ -18,10 +18,10 @@ whole finger along the same rotation-axis line without changing its direction.
 Keep RPY and the joint axis unchanged. The matching CSV field is
 `Joint Origin Z` in the `middle_proximal` row.
 
-All three middle joint axes are local `(0, -1, 0)`, following the legacy
-middle-finger convention. This is opposite to the current index/ring axes.
-Joint types remain continuous, consistent with the source export; physical
-travel limits have not been supplied.
+All non-thumb MCP/PIP/DIP axes are local `(0, -1, 0)` so positive
+rotation flexes toward the palm. Index ab/ad uses local `(-1, 0, 0)`;
+ring ab/ad retains `(0, 0, 1)`. Positive ab/ad is outward for each finger.
+Thumb axes are unchanged. There is no middle ab/ad joint.
 
 The middle links reuse the current index STL paths, visual origins,
 masses, centers of mass, and inertia tensors together. No STL files are
@@ -76,11 +76,12 @@ editable dimensions and geometry rules:
 body. It approximates the actuator, not the full base structure.
 
 The palm uses the supplied `meshes/FINGER_v6_structure_palm.STL` on the fixed,
-collision-only `palm_collision` link. Its default export is in millimeters:
+`palm_collision` link. Its default export is in millimeters:
 `scale="0.001 0.001 0.001"`, `xyz="0 0 0"`, and `rpy="1.570796327 0 0"`
 map it into the base frame. Transformed vertices match the original palm in
-`base_link.STL` to less than 0.000004 mm. The original visual already includes
-the palm, so no duplicate visual or mass was added. Original inertia and joint
+`base_link.STL` to less than 0.000004 mm. The palm now has its own beige visual; its triangles have been removed from
+the derived `base_without_palm.STL` visual to avoid overlapping geometry.
+No mass was added. Original inertia and joint
 elements, including the -6 mm middle MCP offset, remain unchanged.
 
 Tune each named `<collision>` origin and `<box size>` / `<cylinder radius
@@ -96,7 +97,7 @@ main shape instead of enforcing full coverage.
 The SolidWorks CSV schema cannot represent compound primitive collisions.
 Its collision columns are therefore blank; the URDF is authoritative. Joint
 origins in the CSV were synchronized, including the user-tuned middle MCP.
-The extra collision-only palm frame is maintained only in the URDF.
+The extra palm visual/collision frame is maintained only in the URDF.
 
 Collision geometry has been checked structurally, but simulation contact and
 self-collision behavior still require validation in the target simulator.
@@ -122,3 +123,57 @@ about 40% for index/middle/ring proximal links, 22% for intermediate links,
 plates and cylinders reduce summed volume by 82% while preserving the two
 major contact planes. Overlaps count in this metric; it is not union volume.
 Simulator self-collision and contact dynamics remain untested.
+
+
+## Joint settings
+
+All 14 moving joints are `revolute`. Limits are stored in radians in the URDF
+and matching CSV rows; this table uses degrees. All velocity limits are
+**10 rad/s**, as specified by the user.
+
+| Joint group | Lower (deg) | Upper (deg) | Effort (Nm) |
+| --- | ---: | ---: | ---: |
+| Index ab/ad | -20 | 20 | 2 |
+| Ring ab/ad | -20 | 10 | 2 |
+| Index/middle/ring MCP | -10 | 90 | 2 |
+| Index/middle/ring PIP | 0 | 110 | 1 |
+| Index/middle/ring DIP | 0 | 80 | 0.5 |
+| Thumb CMC | -10 | 90 | 2 |
+| Thumb MCP | -20 | 60 | 2 |
+| Thumb IP | -20 | 90 | 2 |
+
+Relative to the initial export, index ab/ad and index/ring MCP/PIP/DIP signs
+have been reversed. Existing command/encoder sign mappings must follow this
+convention. Zero poses and joint attachment frames are unchanged.
+
+Run `python tools/validate_joints.py` to check bounds, effort, velocity
+limits, CSV consistency, and zero-pose fingertip motion signs. Positive flexion
+moves the extended fingertips toward base +X; positive ab/ad moves index
+toward base -Z and ring toward base +Z. Thumb directions retain the original
+axes. URDF effort limits describe the intended maximum joint torque; actual
+hardware enforcement depends on the controller.
+
+
+## Visual materials
+
+Three material types with four shared color variants are defined at the top of `urdf/RAISON_v1.urdf`.
+Edit their RGBA values there to tune the appearance (values from 0 to 1).
+
+| Material | RGBA | Links |
+| --- | --- | --- |
+| `printed_beige` | `0.78 0.69 0.55 1` | Palm and index/middle/ring/thumb distal links |
+| `aluminum` | `0.72 0.75 0.79 1` | Remaining aluminum links |
+| `aluminum_blue_gray` | `0.60 0.69 0.78 1` | Base (excluding palm), index and ring ab/ad-to-MCP carriers |
+| `metal_printed_gray` | `0.40 0.42 0.45 1` | Thumb metacarpal |
+
+These are visual colors only, not physical density or friction settings.
+URDF RGBA does not specify metallic roughness or reflectivity.
+The DIP/IP material assignment is applied to the child distal links.
+
+The original `base_link.STL` is preserved. `meshes/base_without_palm.STL`
+contains its 44070 non-palm triangles; the 2610 palm triangles are represented
+by the separately aligned supplied palm STL. Thus the visual surface is not
+duplicated. The fixed palm link retains the name `palm_collision` for continuity.
+Inertias, collisions, joint settings and link frames are unchanged by coloring.
+`tools/apply_materials.py` records this one-time setup and is not a regeneration
+command for an already-colored URDF. Color edits belong in the shared palette.

@@ -36,7 +36,11 @@ def main():
     report = {}
     old = json.loads((PACKAGE/'validation/bounding_fit_volumes.json').read_text())
     snapshot = json.loads((PACKAGE/'validation/pre_refinement_properties.json').read_text())
-    assert [ET.tostring(j, encoding='unicode') for j in root.findall('joint')] == snapshot['joints']
+    # Joint signs and limits may be tuned; spatial attachment frames must stay fixed.
+    originals = {ET.fromstring(j).get('name'): ET.fromstring(j) for j in snapshot['joints']}
+    for joint in root.findall('joint'):
+        for tag in ['origin', 'parent', 'child']:
+            assert joint.find(tag).attrib == originals[joint.get('name')].find(tag).attrib
     parents = {j.find('child').get('link'): j.find('parent').get('link') for j in root.findall('joint')}
     assert len(parents) == len(links)-1
     for name in links:
@@ -49,7 +53,7 @@ def main():
         assert (PACKAGE/mesh.get('filename').split('package://RAISON_v1/')[1]).is_file()
     assert len(root.findall('.//collision/geometry/mesh')) == 1
     for name, link in links.items():
-        for tag in ['visual', 'inertial']:
+        for tag in ['inertial']:
             element = link.find(tag)
             assert (ET.tostring(element, encoding='unicode') if element is not None else None) == snapshot[name][tag]
         if name in ['base_link', 'palm_collision']:
@@ -123,7 +127,7 @@ def main():
     (PACKAGE/'validation/collision_report.json').write_text(json.dumps(report, indent=2))
     render(links)
     print(json.dumps(report, indent=2))
-    print('PASS: thumb contact planes match and are unobstructed; base moved; palm aligned; tree/paths valid; original visual, inertia and joint elements unchanged. Full mesh coverage is intentionally not required.')
+    print('PASS: thumb contact planes match and are unobstructed; base moved; palm aligned; tree/paths valid; original inertias and joint attachment frames unchanged. Full mesh coverage is intentionally not required.')
 
 
 def lines(c):
